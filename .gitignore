@@ -4,6 +4,3 @@
 !/.github
 !/.gitignore
 .DS_Store
-# 沖繩圖齊了才公開格式頁
-/site/formats
-/site/ja/formats

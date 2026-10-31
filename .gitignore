@@ -1,0 +1,6 @@
+# Public repo:只放網站,內部文件、參考圖、原始素材都留在本機
+/*
+!/site
+!/.github
+!/.gitignore
+.DS_Store

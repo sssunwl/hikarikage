@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-Hant" data-assets="assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hikarikage 光影</title>
+<meta name="description" content="透光反轉片。舉向光的時候,畫面才亮起來。">
+<meta property="og:title" content="Hikarikage 光影">
+<meta property="og:description" content="它在等光。">
+<link rel="icon" href="assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="grain"></div>
+<div class="torch"></div>
+
+<nav class="nav">
+  <a class="nav__brand" href="./">HIKARIKAGE</a>
+  <div class="nav__links">
+    <a href="#sea">系列</a>
+    <a href="wedding/">婚宴</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero__stick">
+      <div class="hero__beam"></div>
+      <canvas class="hero__dust"></canvas>
+      <div class="hero__text">
+        <div class="hero__swap">
+          <div class="hero__before">
+            <h1>它在等光。</h1>
+            <p class="hero__sub">放在桌上,只是一張暗暗的片。<br>舉向窗口,海才亮起來。</p>
+          </div>
+          <div class="hero__after">
+            <strong>Hikarikage</strong>
+            <span>光影 ひかりかげ</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__card">
+        <div data-film="f_turtle" data-lit="hero" data-label="15m" data-alt="從水中仰望海龜的透光片"></div>
+      </div>
+      <div class="hero__cue">往下,開燈</div>
+    </div>
+  </section>
+
+  <section class="words">
+    <p class="reveal">一張片,要有光穿過才算完成。</p>
+    <p class="reveal">早上的窗,傍晚的路燈,<br>同一張片,看起來都不一樣。</p>
+    <p class="reveal">我們只做光穿得過的畫面。</p>
+  </section>
+
+  <section class="depth" id="sea">
+    <div class="depth__stick">
+      <div>
+        <div class="kicker">SERIES 01 / OKINAWA</div>
+        <h2 class="section-title">海的深度</h2>
+        <div class="depth__meter" aria-live="off">0m</div>
+        <p class="depth__line">太陽還在頭頂。</p>
+      </div>
+      <div class="depth__fan">
+        <div data-film="f_sun" data-lit="depth" data-m="0m" data-line="太陽還在頭頂。" data-label="0m" data-alt="水下仰望太陽"></div>
+        <div data-film="f_fish" data-lit="depth" data-m="5m" data-line="魚群轉身,水面碎成一片。" data-label="5m" data-alt="逆光魚群"></div>
+        <div data-film="f_turtle" data-lit="depth" data-m="15m" data-line="海龜從光裡經過,沒有回頭。" data-label="15m" data-alt="仰望海龜"></div>
+        <div data-film="f_manta" data-lit="depth" data-m="30m" data-line="光快用完了,牠還在往上。" data-label="30m" data-alt="仰望鬼蝠魟"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pair">
+    <div class="pair__media">
+      <div data-film="f_ryukyu" data-label="No.01" data-alt="琉球玻璃氣泡微距" class="reveal"></div>
+      <div data-film="f_showa" data-label="No.02" data-alt="昭和型板玻璃微距" class="reveal" style="--i:1"></div>
+    </div>
+    <div>
+      <div class="kicker reveal">SERIES 02 / GLASS</div>
+      <h2 class="section-title reveal">玻璃裡的光</h2>
+      <p class="body reveal">琉球玻璃裡的氣泡,老房子窗上的壓花。<br>都是本來就在等光的東西。</p>
+    </div>
+  </section>
+
+  <section class="scene">
+    <img src="assets/scene/s_wall.webp" alt="光穿過片子,把海龜的影子投在牆上" loading="lazy">
+    <div class="scene__text">
+      <h2 class="reveal">影子也是它的一部分。</h2>
+      <p class="body reveal">太陽斜過來的十幾分鐘,<br>牆上會多一片海。</p>
+    </div>
+    <div class="scene__note">概念圖</div>
+  </section>
+
+  <section class="pair pair--flip">
+    <div class="pair__media">
+      <div data-film="f_ceiling" data-label="Look up" data-alt="仰望傳統建築天花" class="reveal"></div>
+      <div data-film="f_stars" data-label="24&deg;N" data-alt="海島上的銀河" class="reveal" style="--i:1"></div>
+    </div>
+    <div>
+      <div class="kicker reveal">SERIES 03 / PLACE</div>
+      <h2 class="section-title reveal">帶走那個地方的光</h2>
+      <p class="body reveal">抬頭看過的天花,離開前那晚的星空。<br>我們正在尋找想一起做的地方。</p>
+    </div>
+  </section>
+
+  <section class="wed-link">
+    <div>
+      <div class="kicker reveal">WEDDING</div>
+      <h2 class="section-title reveal">那天的光,<br>每人帶一張回家。</h2>
+      <p class="body reveal">席札、回禮、婚攝交片。</p>
+      <a class="more reveal" href="wedding/">看婚宴系列</a>
+    </div>
+    <div data-film="f_couple" data-label="2027.05.03" data-alt="夕陽中的新人剪影" class="reveal"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <b>HIKARIKAGE</b>
+  <span>實物製作中,尚未開賣。網站圖片為 AI 生成的概念圖,實際成品以打樣為準。</span>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

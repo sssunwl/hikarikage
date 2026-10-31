@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja" data-assets="../assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hikarikage ひかりかげ</title>
+<meta name="description" content="光にかざして、はじめて灯る透過フィルム。">
+<meta property="og:title" content="Hikarikage ひかりかげ">
+<meta property="og:description" content="光にかざして、はじめて灯る透過フィルム。">
+<link rel="alternate" hreflang="zh-Hant" href="https://sssunwl.github.io/hikarikage/">
+<link rel="alternate" hreflang="ja" href="https://sssunwl.github.io/hikarikage/ja/">
+<link rel="icon" href="../assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="grain"></div>
+<div class="torch"></div>
+
+<nav class="nav">
+  <a class="nav__brand" href="./">HIKARIKAGE</a>
+  <div class="nav__links">
+    <a href="./#sea">シリーズ</a>
+    <a href="./wedding/">ウェディング</a>
+    
+    <a class="nav__lang" href="../" hreflang="zh-Hant">繁體中文</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero__stick">
+      <div class="hero__beam"></div>
+      <canvas class="hero__dust"></canvas>
+      <div class="hero__text">
+        <div class="hero__swap">
+          <div class="hero__before">
+            <h1>光を、<br>待っている。</h1>
+            <p class="hero__sub">机に置けば、ただの暗い一枚。<br>窓にかざすと、海が灯る。</p>
+          </div>
+          <div class="hero__after">
+            <strong>Hikarikage</strong>
+            <span>ひかりかげ</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__card">
+        <div data-film="f_turtle" data-lit="hero" data-label="15m" data-alt="海の深さ"></div>
+      </div>
+      <div class="hero__cue">下へ、灯りをつける</div>
+    </div>
+  </section>
+
+  <section class="words">
+    <p class="reveal">光が通って、はじめて一枚になる。</p>
+    <p class="reveal">朝の窓、夕方の街灯。<br>同じ一枚が、違って見える。</p>
+    <p class="reveal">光が通り抜ける絵だけを、つくっています。</p>
+  </section>
+
+  <section class="depth" id="sea">
+    <div class="depth__stick">
+      <div>
+        <div class="kicker">SERIES 01 / OCEAN</div>
+        <h2 class="section-title">海の深さ</h2>
+        <div class="depth__meter" aria-live="off">0m</div>
+        <p class="depth__line">太陽は、まだ頭の上。</p>
+      </div>
+      <div class="depth__fan">
+        <div data-film="f_sun" data-lit="depth" data-m="0m" data-line="太陽は、まだ頭の上。" data-label="0m" data-alt="0m"></div>
+        <div data-film="f_fish" data-lit="depth" data-m="5m" data-line="魚の群れが向きを変え、水面が砕ける。" data-label="5m" data-alt="5m"></div>
+        <div data-film="f_turtle" data-lit="depth" data-m="15m" data-line="ウミガメが光の中を過ぎていく。振り返らずに。" data-label="15m" data-alt="15m"></div>
+        <div data-film="f_manta" data-lit="depth" data-m="30m" data-line="光が尽きかけても、まだ上へ。" data-label="30m" data-alt="30m"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pair">
+    <div class="pair__media">
+      <div data-film="f_ryukyu" data-label="No.01" data-alt="ガラスの中の光" class="reveal"></div>
+      <div data-film="f_showa" data-label="No.02" data-alt="ガラスの中の光" class="reveal" style="--i:1"></div>
+    </div>
+    <div>
+      <div class="kicker reveal">SERIES 02 / GLASS</div>
+      <h2 class="section-title reveal">ガラスの中の光</h2>
+      <p class="body reveal">古い家の窓の型板ガラスは、<br>もともと光を待っていた。</p>
+    </div>
+  </section>
+
+  <section class="scene">
+    <img src="../assets/scene/s_wall.webp" alt="影も、この一枚の一部。" loading="lazy">
+    <div class="scene__text">
+      <h2 class="reveal">影も、この一枚の一部。</h2>
+      <p class="body reveal">日が傾く十数分だけ、<br>壁にもうひとつの海ができる。</p>
+    </div>
+    <div class="scene__note">イメージ</div>
+  </section>
+
+  <section class="pair pair--flip">
+    <div class="pair__media">
+      <div data-film="f_ceiling" data-label="Look up" data-alt="その場所の光を、持ち帰る" class="reveal"></div>
+      <div data-film="f_stars" data-label="24&deg;N" data-alt="その場所の光を、持ち帰る" class="reveal" style="--i:1"></div>
+    </div>
+    <div>
+      <div class="kicker reveal">SERIES 03 / PLACE</div>
+      <h2 class="section-title reveal">その場所の光を、持ち帰る</h2>
+      <p class="body reveal">見上げた天井、帰る前の夜の星空。<br>一緒につくってくださる場所を探しています。</p>
+    </div>
+  </section>
+
+  <section class="wed-link">
+    <div>
+      <div class="kicker reveal">WEDDING</div>
+      <h2 class="section-title reveal">あの日の光を、<br>ひとり一枚、持ち帰る。</h2>
+      <p class="body reveal">席札、プチギフト、写真のお渡しに。</p>
+      <a class="more reveal" href="wedding/">ウェディングを見る</a>
+    </div>
+    <div data-film="f_couple" data-label="2027.05.03" data-alt="夕陽のシルエット" class="reveal"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <b>HIKARIKAGE</b>
+  <span>現在、実物を製作中です。未発売。サイトの画像はAIで生成したイメージで、実際の製品は試作により異なります。</span>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>

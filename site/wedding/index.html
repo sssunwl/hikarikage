@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>婚宴系列 Hikarikage</title>
-<meta name="description" content="把婚禮那天的光,做成每位賓客都能帶走的透光片。">
+<meta name="description" content="透光反轉片。舉向光的時候,畫面才亮起來。">
+<meta property="og:title" content="婚宴系列 Hikarikage">
+<meta property="og:description" content="透光反轉片。舉向光的時候,畫面才亮起來。">
+<link rel="alternate" hreflang="zh-Hant" href="https://sssunwl.github.io/hikarikage/wedding/">
+<link rel="alternate" hreflang="ja" href="https://sssunwl.github.io/hikarikage/ja/wedding/">
 <link rel="icon" href="../assets/icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +24,9 @@
   <a class="nav__brand" href="../">HIKARIKAGE</a>
   <div class="nav__links">
     <a href="../#sea">系列</a>
-    <a href="./" aria-current="page">婚宴</a>
+    <a href="../wedding/" aria-current="page">婚宴</a>
+    
+    <a class="nav__lang" href="../ja/wedding/" hreflang="ja">日本語</a>
   </div>
 </nav>
 
@@ -32,8 +38,8 @@
       <p class="body reveal" style="--i:2">酒席散了,鮮花謝了。<br>這張片夾進書裡,下次對著窗,那天又亮起來。</p>
     </div>
     <div class="wed-hero__cards">
-      <div data-film="f_rose" data-label="M &amp; R" data-alt="教堂彩繪玻璃透光片" class="reveal" style="--i:2"></div>
-      <div data-film="f_couple" data-label="2027.05.03" data-alt="新人逆光剪影透光片" class="reveal" style="--i:3"></div>
+      <div data-film="f_rose" data-label="M &amp; R" data-alt="教堂花窗" class="reveal" style="--i:2"></div>
+      <div data-film="f_couple" data-label="2027.05.03" data-alt="夕照剪影" class="reveal" style="--i:3"></div>
     </div>
   </section>
 
@@ -46,7 +52,7 @@
   </section>
 
   <section class="scene">
-    <img src="../assets/scene/s_table.webp" alt="光穿過片子,把彩色光影投在婚宴桌布上" loading="lazy">
+    <img src="../assets/scene/s_table.webp" alt="開席前,桌上先有一片彩色的光。" loading="lazy">
     <div class="scene__text">
       <h2 class="reveal">開席前,<br>桌上先有一片彩色的光。</h2>
     </div>
@@ -59,18 +65,9 @@
       <h2 class="section-title reveal">三種光</h2>
     </div>
     <div class="gallery__row">
-      <figure class="gallery__item">
-        <div data-film="f_couple" data-alt="新人逆光剪影"></div>
-        <figcaption>夕照剪影</figcaption>
-      </figure>
-      <figure class="gallery__item">
-        <div data-film="f_rose" data-alt="教堂花窗"></div>
-        <figcaption>教堂花窗</figcaption>
-      </figure>
-      <figure class="gallery__item">
-        <div data-film="f_lily" data-alt="透視百合與蕨葉"></div>
-        <figcaption>透視花</figcaption>
-      </figure>
+      <figure class="gallery__item"><div data-film="f_couple" data-alt="夕照剪影"></div><figcaption>夕照剪影</figcaption></figure>
+      <figure class="gallery__item"><div data-film="f_rose" data-alt="教堂花窗"></div><figcaption>教堂花窗</figcaption></figure>
+      <figure class="gallery__item"><div data-film="f_lily" data-alt="透視花"></div><figcaption>透視花</figcaption></figure>
     </div>
   </section>
 
@@ -89,7 +86,7 @@
       </div>
     </div>
     <div class="make__preview">
-      <div id="demo" data-film="f_lily" data-alt="印上名字的透光片預覽"></div>
+      <div id="demo" data-film="f_lily" data-alt="透視花"></div>
     </div>
   </section>
 

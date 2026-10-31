@@ -17,6 +17,7 @@
       <div class="film__label">${el.dataset.label || ''}</div>`;
     return { el, cur: 0, target: 0, hover: 0, mode: el.dataset.lit || 'scroll' };
   });
+  $$('[data-card]').forEach(el => films.push({ el, cur: 0, target: 0, hover: 0, mode: 'scroll', floor: .5 }));
 
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -30,6 +31,8 @@
   const meter = document.querySelector('.depth__meter');
   const line = document.querySelector('.depth__line');
   const scenes = $$('.scene');
+  const strip = document.querySelector('.strip');
+  const stripRow = document.querySelector('.strip__row');
   const stops = depthFilms.map(f => ({ m: f.el.dataset.m, t: f.el.dataset.line }));
 
   const progress = el => {
@@ -80,13 +83,27 @@
     }
   }
 
+  function updateStrip() {
+    if (!strip) return;
+    const p = calm ? 0 : progress(strip);
+    const travel = Math.max(0, stripRow.scrollWidth - stripRow.parentElement.clientWidth * (innerWidth < 768 ? 1 : .7));
+    stripRow.style.transform = `translate3d(${-p * travel}px, 0, 0)`;
+    const mid = innerWidth * (innerWidth < 768 ? .5 : .62);
+    films.forEach(f => {
+      if (f.mode !== 'strip') return;
+      const r = f.el.getBoundingClientRect();
+      const d = Math.abs(r.left + r.width / 2 - mid) / (innerWidth * .46);
+      f.target = calm ? 1 : ease(clamp(1.1 - d));
+    });
+  }
+
   function updateFilms() {
     const mid = innerHeight / 2;
     films.forEach(f => {
       if (f.mode !== 'scroll') return;
       const r = f.el.getBoundingClientRect();
       const d = Math.abs(r.top + r.height / 2 - mid) / (innerHeight * .72);
-      f.target = calm ? 1 : ease(clamp(1.15 - d));
+      f.target = calm ? 1 : Math.max(f.floor || 0, ease(clamp(1.15 - d)));
     });
   }
 
@@ -105,7 +122,7 @@
 
   // 光要有慣性,所以數值一路追目標,不是直接跳過去
   function frame() {
-    if (dirty) { dirty = false; updateHero(); updateDepth(); updateFilms(); updateScenes(); }
+    if (dirty) { dirty = false; updateHero(); updateDepth(); updateStrip(); updateFilms(); updateScenes(); }
     films.forEach(f => {
       const goal = Math.max(f.target, f.hover);
       if (Math.abs(goal - f.cur) < .002) return;
